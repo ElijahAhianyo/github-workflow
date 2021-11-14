@@ -2,7 +2,7 @@ name: cloudrun-deploy
 on:
   workflow_run:
     workflows: cloudrun-test
-    branches: [main, master]
+#    branches: [main, master]
     types: completed
 jobs:
   setup-build-publish-deploy:
