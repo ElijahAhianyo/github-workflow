@@ -2,7 +2,7 @@ name: cloudrun-deploy
 on:
   workflow_run:
     workflows: cloudrun-test
-    branches:
+#    branches: [main, master]
     types: completed
 jobs:
   setup-build-publish-deploy:
@@ -13,6 +13,6 @@ jobs:
       uses: actions/checkout@master
 
     - name: Publish
-      if: ${{ github.event.workflow_run.conclusion == 'success' }}
+#      if: ${{ github.event.workflow_run.conclusion == 'success' }}
       run: |
-        echo "THis is the completion step"
+        echo "THis is the completion step of the workflow"
