@@ -1,0 +1,14 @@
+name: cloudrun-test
+on: [push, pull_request]
+jobs:
+  setup-build-test:
+    name: Setup, Build, Publish, and Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    # Run tests
+    - name: Test
+      run: |
+        echo "this is the test step"
